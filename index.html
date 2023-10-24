@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Digital Portfolio</title>
+    <link rel="shortcut icon" href="./favicon-16x16.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: url(background.jpg);
+            background-size: cover;
+            background-position: right;
+
+        }
+
+        h1.intro {
+            color: white;
+            text-align: center;
+            padding-top: 70px;
+
+        }
+
+        p.intro {
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+
+        }
+        .about{
+            text-align: start;
+        }
+
+        .desc {
+            color: white;
+            padding-top: 70px;
+            padding-left: 50px;
+            font-size: large;
+            background-image: inherit;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            float: right;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+
+        }
+
+
+
+        nav ul li a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        div {
+            border: 80px;
+            width: 50%;
+            padding-right: 20px;
+            text-align: left;
+            padding: 50px;
+
+            margin: 50px;
+            font-family: inherit;
+        }
+
+        .section-content {
+            color: white;
+        }
+
+        .Download-button {
+            background-color: whitesmoke;
+            color: black;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .Download-button:hover {
+            background-color: blue;
+        }
+
+        footer {
+
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="# home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 class="intro">ABITHA KARMEGAM</h1>
+            <P class="intro">Budding Full-Stack Developer</P>
+        </section>
+        <section id="about">
+            <div>
+                <p class="desc">
+                    <br>
+                    <br>
+                    <br>
+                    <br> I'm Abitha ,an aspiring web developer eager to leave my mark in the digital world.With
+                    passion for crafting dynamic and user-centric websites,I'm here to transform ideas into
+                    interactive online experiences.
+                </p>
+            </div>
+
+        </section>
+        <section id="resume">
+            <center>
+                <div class="section-content">
+                    <h2>RESUME</h2>
+                    <a href="https://drive.google.com/file/d/1T424nX4QVZLv23yUS3L_dbGm0hnG93Fx/view?usp=sharing"
+                        class=Download-button>Download</a>
+                </div>
+            </center>
+        </section>
+    </main>
+    <footer class="icons">
+        <p>&copy;@ABITHA</p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
